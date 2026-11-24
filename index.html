@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>مركز الأخوين توب وان للإلكترونيات والطاقة الشمسية</title>
+
+<meta name="description" content="إلكترونيات حديثة وحلول طاقة شمسية موثوقة في تعز وعدن. جميع قنوات التواصل وأرقام الفروع في مكان واحد.">
+<meta name="theme-color" content="#040E40">
+
+<meta property="og:site_name" content="TOP ONE ELECTRONICS">
+<meta property="og:title" content="مركز الأخوين توب وان للإلكترونيات والطاقة الشمسية">
+<meta property="og:description" content="إلكترونيات حديثة وحلول طاقة شمسية موثوقة في تعز وعدن.">
+<meta property="og:image" content="logos/top-one-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_YE">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مركز الأخوين توب وان للإلكترونيات والطاقة الشمسية">
+<meta name="twitter:description" content="إلكترونيات حديثة وحلول طاقة شمسية موثوقة في تعز وعدن.">
+<meta name="twitter:image" content="logos/top-one-logo.png">
+
+<link rel="icon" type="image/png" href="logos/top-one-logo.png">
+<link rel="apple-touch-icon" href="logos/top-one-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   TOP ONE — تصميم فاخر مستوحى من الطاقة الشمسية
+   ========================================================= */
+
+:root {
+  --navy-deep:  #040E40;
+  --navy:       #061B73;
+  --navy-mid:   #0B2A9E;
+  --yellow:     #FED403;
+  --yellow-brt: #FFE55C;
+  --white:      #FFFFFF;
+
+  --text:       #E6EAF5;
+  --text-dim:   rgba(230, 234, 245, 0.68);
+  --text-mute:  rgba(230, 234, 245, 0.42);
+
+  --glass:        rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-hover: rgba(254, 212, 3, 0.45);
+
+  --radius:    18px;
+  --radius-lg: 26px;
+
+  --t: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  overflow-x: hidden;
+  background: var(--navy-deep);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: var(--navy-deep);
+  background-image:
+    radial-gradient(ellipse 100% 50% at 50% 0%, rgba(11, 42, 158, 0.55), transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(11, 42, 158, 0.35), transparent 70%),
+    linear-gradient(180deg, #040E40 0%, #020833 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   لوح شمسي حقيقي — شبكة خلايا مع فواصل صفراء
+   ═══════════════════════════════════════════════════════════ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 53px,
+      rgba(254, 212, 3, 0.18) 53px,
+      rgba(254, 212, 3, 0.18) 55px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 53px,
+      rgba(254, 212, 3, 0.18) 53px,
+      rgba(254, 212, 3, 0.18) 55px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.02) 2px,
+      rgba(255, 255, 255, 0.02) 3px
+    );
+
+  background-size:
+    224px 224px,
+    224px 224px,
+    224px 224px;
+
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   انعكاس الشمس على اللوح — شعاع يمر ببطء
+   ═══════════════════════════════════════════════════════════ */
+.panel-shimmer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(254, 212, 3, 0.03) 43%,
+    rgba(254, 212, 3, 0.06) 50%,
+    rgba(254, 212, 3, 0.03) 57%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 300% 300%;
+  animation: panelShimmer 40s ease-in-out infinite;
+  will-change: background-position;
+}
+
+@keyframes panelShimmer {
+  0%, 100% { background-position: 100% 100%; }
+  50%      { background-position: 0% 0%; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   شمس دوّارة 
+   ═══════════════════════════════════════════════════════════ */
+.sun-rays {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(260px, 60vw, 500px);
+  height: clamp(260px, 60vw, 500px);
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(254, 212, 3, 0.12) 0deg,
+    transparent 15deg,
+    transparent 25deg
+  );
+  mask-image: radial-gradient(circle at center, black 15%, transparent 55%);
+  -webkit-mask-image: radial-gradient(circle at center, black 15%, transparent 55%);
+  animation: sunRaysRotate 120s linear infinite;
+  will-change: transform;
+}
+
+@keyframes sunRaysRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* هالة الشمس المضيئة */
+.sun-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 45vw, 380px);
+  height: clamp(200px, 45vw, 380px);
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(circle at center,
+    rgba(255, 250, 220, 0.65) 0%,
+    rgba(254, 212, 3, 0.35) 12%,
+    rgba(254, 212, 3, 0.15) 30%,
+    rgba(254, 212, 3, 0.05) 45%,
+    transparent 60%);
+  filter: blur(25px);
+  animation: sunPulse 10s ease-in-out infinite alternate;
+  will-change: opacity;
+}
+
+@keyframes sunPulse {
+  from { opacity: 0.8; }
+  to   { opacity: 1; }
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+
+.container {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   الهوية والشعارات (تم تعديل المسافات والمواقع)
+   ═══════════════════════════════════════════════════════════ */
+.hero {
+  padding: 15px 0 40px; /* تم تقليل المسافة العلوية لرفع الشعارات */
+  text-align: center;
+  position: relative;
+}
+
+.hero__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  margin-bottom: 35px;
+  width: 100%;
+  position: relative;
+}
+
+.logo-plate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  min-width: 0;
+}
+
+/* توجيه الشعار الأول (الأيمن) لأقصى اليمين، والثاني (الأيسر) لأقصى اليسار */
+.logo-plate:first-child { justify-content: flex-start; }
+.logo-plate:last-child  { justify-content: flex-end; }
+
+.logo-plate img {
+  height: clamp(110px, 32vw, 160px);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+}
+
+/* تصغير الخط الأصفر ليكون مجرد فاصل أنيق */
+.brand-divider {
+  width: 2px;
+  height: clamp(40px, 15vw, 70px); /* تم تصغير الارتفاع */
+  background: var(--yellow);
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(254, 212, 3, 0.45);
+  opacity: 0.9;
+  margin: 0 10px; /* مسافة متوازنة بين الشعار والخط */
+}
+
+.hero__eyebrow {
+  font-size: clamp(0.72rem, 2.6vw, 0.82rem);
+  font-weight: 600;
+  color: var(--yellow);
+  letter-spacing: clamp(3px, 1vw, 5px);
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 10vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--white);
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 4.2vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #FED403 0%, #FFE55C 50%, #FED403 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 30px rgba(254, 212, 3, 0.35));
+}
+
+.hero__tagline {
+  font-size: clamp(0.9rem, 3.4vw, 1rem);
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   الأقسام
+   ═══════════════════════════════════════════════════════════ */
+.section { padding: 52px 0 20px; }
+
+.section__title {
+  font-size: clamp(1.25rem, 4.3vw, 1.55rem);
+  font-weight: 800;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.section__title::before,
+.section__title::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  flex-shrink: 0;
+}
+.section__title::before { background: linear-gradient(90deg, transparent, rgba(254, 212, 3, 0.55)); }
+.section__title::after  { background: linear-gradient(270deg, transparent, rgba(254, 212, 3, 0.55)); }
+
+/* ═══════════════════════════════════════════════════════════
+   وسائل التواصل
+   ═══════════════════════════════════════════════════════════ */
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 14px;
+  padding: 0 4px;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.social-btn__circle {
+  width: clamp(50px, 13vw, 62px);
+  height: clamp(50px, 13vw, 62px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all var(--t);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn__circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 110%, rgba(254, 212, 3, 0.4), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+
+.social-btn__circle img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.social-btn:hover .social-btn__circle,
+.social-btn:focus-visible .social-btn__circle {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 4px rgba(254, 212, 3, 0.06),
+    0 0 30px rgba(254, 212, 3, 0.22);
+}
+
+.social-btn:hover .social-btn__circle::before,
+.social-btn:focus-visible .social-btn__circle::before { opacity: 1; }
+.social-btn:active .social-btn__circle { transform: translateY(-1px) scale(0.97); }
+
+.social-btn__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: color var(--t);
+}
+
+.social-btn:hover .social-btn__label,
+.social-btn:focus-visible .social-btn__label { color: var(--yellow); }
+
+.social-btn.is-placeholder { opacity: 0.45; cursor: not-allowed; }
+.social-btn.is-placeholder * { cursor: not-allowed; }
+.social-btn.is-placeholder:hover .social-btn__circle {
+  transform: none;
+  border-color: var(--glass-border);
+  box-shadow: none;
+}
+.social-btn.is-placeholder:hover .social-btn__circle::before { opacity: 0; }
+.social-btn.is-placeholder:hover .social-btn__label { color: var(--text-dim); }
+.social-btn.is-placeholder::after {
+  content: "قريباً";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--yellow);
+  color: var(--navy-deep);
+  font-size: 0.58rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  z-index: 3;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   صندوق الإدارة
+   ═══════════════════════════════════════════════════════════ */
+.managers-box {
+  margin-top: 32px;
+  padding: 22px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.managers-box::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(254, 212, 3, 0.4), transparent);
+}
+
+.managers-box__label {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.managers-box__grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.manager-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+  color: var(--white);
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all var(--t);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.35);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.manager-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+.manager-btn:active { transform: translateY(-1px) scale(0.97); }
+.manager-btn img { width: 20px; height: 20px; }
+
+/* ═══════════════════════════════════════════════════════════
+   بطاقات الفروع (تم إضافة شارة مفتوح/مغلق)
+   ═══════════════════════════════════════════════════════════ */
+.branches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 720px) {
+  .branches-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.branch-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  transition: all var(--t);
+  overflow: hidden;
+}
+
+.branch-card::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(254, 212, 3, 0.35), transparent);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+
+.branch-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+}
+.branch-card:hover::before { opacity: 1; }
+
+.branch-card.is-main {
+  border-color: rgba(254, 212, 3, 0.4);
+  background: linear-gradient(135deg,
+    rgba(254, 212, 3, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0 8px 32px rgba(254, 212, 3, 0.1);
+}
+.branch-card.is-main::before { opacity: 1; }
+.branch-card.is-main:hover {
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.35),
+    0 0 60px rgba(254, 212, 3, 0.15);
+}
+
+/* شارة مفتوح / مغلق */
+.branch-card__status {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 10;
+}
+.branch-card__status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.branch-card__status.is-open {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+.branch-card__status.is-open::before {
+  background: #25D366;
+  box-shadow: 0 0 8px #25D366;
+}
+.branch-card__status.is-closed {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.branch-card__status.is-closed::before {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.branch-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FED403, #FFE55C);
+  color: var(--navy-deep);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 18px rgba(254, 212, 3, 0.45);
+  letter-spacing: 0.3px;
+}
+
+.branch-card__name {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.branch-card__address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.branch-card__address [data-lucide] {
+  width: 16px;
+  height: 16px;
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.branch-card__actions { display: flex; flex-wrap: wrap; gap: 9px; }
+
+/* ═══════════════════════════════════════════════════════════
+   الأزرار
+   ═══════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all var(--t);
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  flex: 1 1 auto;
+  min-width: fit-content;
+}
+
+.btn:active { transform: scale(0.97); }
+.btn img { width: 17px; height: 17px; flex-shrink: 0; }
+.btn [data-lucide] { width: 16px; height: 16px; }
+
+.btn--wa {
+  background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.28);
+}
+.btn--wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45); }
+
+.btn--call {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.btn--call:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--glass-border-hover);
+  color: var(--yellow);
+  transform: translateY(-2px);
+}
+
+.btn--copy {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  border-color: rgba(255, 255, 255, 0.1);
+  padding: 11px;
+  flex: 0 0 44px;
+  min-width: 44px;
+}
+.btn--copy:hover { border-color: var(--glass-border-hover); color: var(--yellow); }
+
+.btn--map {
+  background: rgba(254, 212, 3, 0.08);
+  color: var(--yellow);
+  border-color: rgba(254, 212, 3, 0.32);
+  flex: 1 1 100%;
+}
+.btn--map:hover {
+  background: rgba(254, 212, 3, 0.16);
+  border-color: var(--yellow);
+  box-shadow: 0 6px 20px rgba(254, 212, 3, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   المعلومات الإضافية
+   ═══════════════════════════════════════════════════════════ */
+.info-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 620px) { .info-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.info-card {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all var(--t);
+  align-items: flex-start;
+}
+
+.info-card--link { text-decoration: none; color: inherit; }
+.info-card--link:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.info-card__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg,
+    rgba(254, 212, 3, 0.16) 0%,
+    rgba(254, 212, 3, 0.04) 100%);
+  border: 1px solid rgba(254, 212, 3, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+}
+
+.info-card__icon [data-lucide] { width: 22px; height: 22px; }
+
+.info-card__title { font-size: 0.95rem; font-weight: 800; color: var(--white); margin-bottom: 6px; }
+.info-card__text { font-size: 0.87rem; color: var(--text-dim); line-height: 1.7; }
+.info-card__note { font-size: 0.79rem; color: var(--text-mute); margin-top: 6px; }
+
+/* ═══════════════════════════════════════════════════════════
+   التذييل
+   ═══════════════════════════════════════════════════════════ */
+.footer {
+  margin-top: 64px;
+  padding: 44px 24px 32px;
+  background: linear-gradient(180deg,
+    rgba(11, 42, 158, 0.2) 0%,
+    rgba(4, 14, 64, 0.5) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  box-shadow: 0 0 22px var(--yellow);
+}
+
+.footer__logo-wrap {
+  display: inline-block;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 22px;
+  box-shadow: none;
+}
+
+.footer__logo { 
+  height: clamp(100px, 30vw, 150px);
+  width: auto; 
+  object-fit: contain; 
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+}
+
+.footer__name { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; line-height: 1.6; }
+.footer__tagline { font-size: 0.87rem; color: var(--yellow); font-weight: 600; margin-bottom: 18px; }
+.footer__copyright { font-size: 0.74rem; color: var(--text-mute); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.07); }
+
+/* ═══════════════════════════════════════════════════════════
+   Toast
+   ═══════════════════════════════════════════════════════════ */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(90px);
+  background: rgba(6, 27, 115, 0.96);
+  color: var(--white);
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+  pointer-events: none;
+  border: 1px solid rgba(254, 212, 3, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ═══════════════════════════════════════════════════════════
+   الحركات
+   ═══════════════════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__brand    { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both; }
+.hero__eyebrow  { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both; }
+.hero__title    { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.30s both; }
+.hero__subtitle { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both; }
+.hero__tagline  { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.46s both; }
+
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-ready .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__brand, .hero__eyebrow, .hero__title, .hero__subtitle, .hero__tagline,
+  .sun-glow, .sun-rays, .panel-shimmer { animation: none; }
+  .reveal-ready .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Lucide + Placeholder
+   ═══════════════════════════════════════════════════════════ */
+[data-lucide] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.logo-missing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: var(--white);
+  color: var(--navy);
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: clamp(0.6rem, 2.3vw, 0.78rem);
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  min-height: clamp(44px, 11vw, 56px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- خلفيات زخرفية -->
+<div class="panel-shimmer" aria-hidden="true"></div>
+<div class="sun-rays" aria-hidden="true"></div>
+<div class="sun-glow" aria-hidden="true"></div>
+
+<div class="container">
+
+  <!-- ═══════════════ الهوية ═══════════════ -->
+  <header class="hero">
+    <div class="hero__brand">
+      <div class="logo-plate">
+        <img src="logos/top-one-logo.png" alt="TOP ONE ELECTRONICS" id="logoMain">
+      </div>
+      
+      <span class="brand-divider" aria-hidden="true"></span>
+      
+      <div class="logo-plate">
+        <img src="logos/mf-electronics-logo.png" alt="MF Electronics" id="logoSub">
+      </div>
+    </div>
+
+    <p class="hero__eyebrow">مـركـز الأخـويـن</p>
+    <h1 class="hero__title">توب وان</h1>
+    <p class="hero__subtitle">للإلكترونيات والطاقة الشمسية</p>
+    <p class="hero__tagline">جميع قنوات التواصل معنا في مكان واحد</p>
+  </header>
+
+  <!-- ═══════════════ وسائل التواصل ═══════════════ -->
+  <section class="section reveal" id="social">
+    <h2 class="section__title">تابعنا وتواصل معنا</h2>
+    <div class="social-grid" id="socialGrid"></div>
+
+    <div class="managers-box">
+      <p class="managers-box__label">للتواصل المباشر مع الإدارة</p>
+      <div class="managers-box__grid" id="managerGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ الفروع ═══════════════ -->
+  <section class="section reveal" id="branches">
+    <h2 class="section__title">فروعنا وأرقام التواصل</h2>
+    <div class="branches-grid" id="branchesGrid"></div>
+  </section>
+
+  <!-- ═══════════════ معلومات إضافية ═══════════════ -->
+  <section class="section reveal" id="info">
+    <h2 class="section__title">معلومات إضافية</h2>
+    <div class="info-grid" id="infoGrid"></div>
+  </section>
+
+  <!-- ═══════════════ التذييل ═══════════════ -->
+  <footer class="footer reveal">
+    <div class="footer__logo-wrap">
+      <img src="logos/top-one-logo.png" alt="TOP ONE ELECTRONICS" class="footer__logo" id="footerLogo">
+    </div>
+    <p class="footer__name">مركز الأخوين توب وان للإلكترونيات والطاقة الشمسية</p>
+    <p class="footer__tagline">نسعد بخدمتكم دائماً</p>
+    <p class="footer__copyright">
+      جميع الحقوق محفوظة – مركز الأخوين توب وان <span id="year">2026</span> ©
+    </p>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  const DATA = {
+    mainWhatsApp: "967771238355",
+    managers: [
+      { label: "الإدارة", phone: "967771238355" },
+      { label: "الإدارة", phone: "967773999965" }
+    ],
+    social: {
+      facebook:  "https://www.facebook.com/alakhawain11?mibextid=ZbWKwL",
+      instagram: "https://www.instagram.com/alakhawain1?avpt=MXRkbDU3NDEzNTc5aQ==",
+      tiktok:    "https://www.tiktok.com/@alakhawain0?_r=1&_t=ZS-9BcqM6z0num",
+      x:         "https://x.com/alakhawainye",
+      youtube:   "https://youtube.com/@alakhawainye?si=2cWohJAUcICd-Uhc"
+    },
+    workingHours: {
+      days:   "من السبت إلى الخميس",
+      time:   "من 9:00 صباحاً حتى 9:00 مساءً",
+      closed: "الجمعة: مغلق"
+    },
+    email: "alakhwaintopone@gmail.com",
+    branches: [
+      {
+        id: "main", isMain: true,
+        name: "الفرع الرئيسي", city: "تعز", area: "شارع جمال",
+        phones: { whatsapp: ["967733754919"], landline: ["04280216"] },
+        mapUrl: ""
+      },
+      {
+        id: "hasab", isMain: false,
+        name: "فرع الحصب", city: "تعز", area: "الحصب — جولة المرور",
+        phones: { whatsapp: ["967783411146", "967739815906"], landline: ["04244149"] },
+        mapUrl: "https://maps.google.com/?cid=98806137933813482&entry=gps"
+      },
+      {
+        id: "awadi", isMain: false,
+        name: "فرع العواضي", city: "تعز", area: "جولة العواضي",
+        phones: { whatsapp: ["967783411149"], landline: ["04280216"] },
+        mapUrl: ""
+      },
+      {
+        id: "aden", isMain: false,
+        name: "فرع عدن", city: "عدن", area: "شارع عبدالقوي — مقابل الشهاب تك",
+        phones: { whatsapp: ["967782999479"], landline: [] },
+        mapUrl: "https://maps.app.goo.gl/jTgCKNww1UcndbJu6"
+      }
+    ]
+  };
+
+  const $  = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+  const brandIcon = (slug, color) =>
+    `https://cdn.simpleicons.org/${slug}/${color || 'FFFFFF'}`;
+  const lucide = (name) => `<i data-lucide="${name}"></i>`;
+  const cleanPhone = (p) => String(p || '').replace(/[^\d+]/g, '');
+  const waLink = (phone, text) => {
+    const clean = cleanPhone(phone);
+    return `https://wa.me/${clean}${text ? '?text=' + encodeURIComponent(text) : ''}`;
+  };
+  const telLink = (phone) => `tel:${cleanPhone(phone)}`;
+
+  const formatPhone = (num) => {
+    let n = String(num);
+    if (n.startsWith('967')) n = n.slice(3);
+    if (n.length === 9) return n.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3');
+    if (n.length === 8) return n.replace(/(\d{4})(\d{4})/, '$1 $2');
+    return n;
+  };
+
+  const yearEl = $('#year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ═══════════ حساب حالة الفرع (مفتوح/مغلق) ═══════════ */
+  function checkOpenStatus() {
+    const now = new Date();
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const yemenTime = new Date(utc + (3600000 * 3));
+
+    const day = yemenTime.getDay(); // 0 = الأحد، 5 = الجمعة، 6 = السبت
+    const hours = yemenTime.getHours();
+    const minutes = yemenTime.getMinutes();
+    const timeInMinutes = (hours * 60) + minutes;
+
+    if (day === 5) return false; // الجمعة مغلق
+
+    const openTime = 9 * 60; // 9 صباحاً
+    const closeTime = 21 * 60; // 9 مساءً
+
+    if (timeInMinutes >= openTime && timeInMinutes < closeTime) {
+      return true;
+    }
+    return false;
+  }
+
+  const isOpenNow = checkOpenStatus();
+  const statusHTML = isOpenNow 
+    ? `<span class="branch-card__status is-open">مفتوح</span>` 
+    : `<span class="branch-card__status is-closed">مغلق</span>`;
+
+  function handleLogo(imgEl, text) {
+    if (!imgEl) return;
+    const apply = () => {
+      if (imgEl.dataset.replaced) return;
+      imgEl.dataset.replaced = '1';
+      const ph = document.createElement('div');
+      ph.className = 'logo-missing';
+      ph.textContent = text;
+      imgEl.replaceWith(ph);
+    };
+    if (imgEl.complete && imgEl.naturalWidth === 0) apply();
+    else imgEl.addEventListener('error', apply, { once: true });
+  }
+  handleLogo($('#logoMain'), 'TOP ONE');
+  handleLogo($('#logoSub'), 'MF Electronics');
+  handleLogo($('#footerLogo'), 'TOP ONE');
+
+  const toast = $('#toast');
+  let toastTimer = null;
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2300);
+  }
+
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:-9999px;opacity:0;';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      showToast('✓ تم نسخ الرقم: ' + text);
+    } catch (err) {
+      showToast('تعذّر النسخ — يمكنك تحديده يدوياً');
+    }
+  }
+
+  const socialGrid = $('#socialGrid');
+  if (socialGrid) {
+    const platforms = [
+      { key: 'facebook',  label: 'Facebook',  slug: 'facebook',  alwaysShow: true },
+      { key: 'instagram', label: 'Instagram', slug: 'instagram', alwaysShow: true },
+      { key: 'tiktok',    label: 'TikTok',    slug: 'tiktok',    alwaysShow: true },
+      { key: 'x',         label: 'X',         slug: 'x',         alwaysShow: true },
+      { key: 'youtube',   label: 'YouTube',   slug: 'youtube',   alwaysShow: true }
+    ];
+
+    platforms.forEach(p => {
+      const url = (DATA.social && DATA.social[p.key]) ? String(DATA.social[p.key]).trim() : '';
+      if (!url && !p.alwaysShow) return;
+      const isEmpty = !url;
+      const a = document.createElement('a');
+      a.className = 'social-btn' + (isEmpty ? ' is-placeholder' : '');
+      a.href = url || '#';
+      a.setAttribute('aria-label', p.label);
+      a.innerHTML = `
+        <span class="social-btn__circle">
+          <img src="${brandIcon(p.slug, 'FFFFFF')}" alt="" width="24" height="24" loading="lazy">
+        </span>
+        <span class="social-btn__label">${p.label}</span>
+      `;
+      if (isEmpty) {
+        a.setAttribute('aria-disabled', 'true');
+        a.setAttribute('title', 'قريباً — أضف رابط ' + p.label);
+        a.addEventListener('click', (e) => e.preventDefault());
+      } else {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+      socialGrid.appendChild(a);
+    });
+  }
+
+  const managerGrid = $('#managerGrid');
+  if (managerGrid && Array.isArray(DATA.managers)) {
+    DATA.managers.forEach((m, idx) => {
+      if (!m.phone) return;
+      const a = document.createElement('a');
+      a.className = 'manager-btn';
+      a.href = waLink(m.phone, 'السلام عليكم، أود التواصل مع الإدارة');
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.innerHTML = `
+        <img src="${brandIcon('whatsapp', 'FFFFFF')}" alt="" width="20" height="20" loading="lazy">
+        <span>${m.label || 'الإدارة'}${DATA.managers.length > 1 ? ' ' + (idx + 1) : ''}</span>
+      `;
+      managerGrid.appendChild(a);
+    });
+  }
+
+  const branchesGrid = $('#branchesGrid');
+  if (branchesGrid && Array.isArray(DATA.branches)) {
+    DATA.branches.forEach(b => {
+      const waNumbers = (b.phones && b.phones.whatsapp) || [];
+      const landlines = (b.phones && b.phones.landline) || [];
+
+      const waButtons = waNumbers.map(num => `
+        <a class="btn btn--wa" href="${waLink(num)}" target="_blank" rel="noopener noreferrer">
+          <img src="${brandIcon('whatsapp', 'FFFFFF')}" alt="" width="17" height="17" loading="lazy">
+          <span>${formatPhone(num)}</span>
+        </a>
+      `).join('');
+
+      const landlineButtons = landlines.map(num => `
+        <a class="btn btn--call" href="${telLink(num)}">
+          ${lucide('phone')}
+          <span>${formatPhone(num)}</span>
+        </a>
+        <button class="btn btn--copy" type="button" data-copy="${num}" aria-label="نسخ الرقم">
+          ${lucide('copy')}
+        </button>
+      `).join('');
+
+      const mapButton = (b.mapUrl && b.mapUrl.trim()) ? `
+        <a class="btn btn--map" href="${b.mapUrl}" target="_blank" rel="noopener noreferrer">
+          ${lucide('map-pin')}
+          <span>افتح الموقع على الخريطة</span>
+        </a>
+      ` : '';
+
+      const badge = b.isMain ? '<span class="branch-card__badge">الفرع الرئيسي</span>' : '';
+
+      const card = document.createElement('article');
+      card.className = 'branch-card' + (b.isMain ? ' is-main' : '');
+      card.innerHTML = `
+        ${statusHTML}
+        ${badge}
+        <h3 class="branch-card__name">${b.name || 'فرع'}</h3>
+        <div class="branch-card__address">
+          ${lucide('map-pin')}
+          <span>${(b.city || '') + (b.area ? ' — ' + b.area : '')}</span>
+        </div>
+        <div class="branch-card__actions">
+          ${waButtons}${landlineButtons}${mapButton}
+        </div>
+      `;
+      branchesGrid.appendChild(card);
+    });
+  }
+
+  const infoGrid = $('#infoGrid');
+  if (infoGrid) {
+    const cards = [];
+    if (DATA.workingHours) {
+      const w = DATA.workingHours;
+      cards.push(`
+        <div class="info-card">
+          <div class="info-card__icon">${lucide('clock')}</div>
+          <div>
+            <h3 class="info-card__title">أوقات العمل</h3>
+            <div class="info-card__text">${w.days || ''}<br>${w.time || ''}</div>
+            ${w.closed ? `<div class="info-card__note">${w.closed}</div>` : ''}
+          </div>
+        </div>
+      `);
+    }
+    if (DATA.email) {
+      cards.push(`
+        <a class="info-card info-card--link" href="mailto:${DATA.email}">
+          <div class="info-card__icon">${lucide('mail')}</div>
+          <div>
+            <h3 class="info-card__title">البريد الإلكتروني</h3>
+            <div class="info-card__text">${DATA.email}</div>
+          </div>
+        </a>
+      `);
+    }
+    infoGrid.innerHTML = cards.join('');
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-copy]');
+    if (!btn) return;
+    e.preventDefault();
+    copyText(btn.dataset.copy);
+  });
+
+  function renderLucide() {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+  }
+  renderLucide();
+  window.addEventListener('load', renderLucide);
+
+  const reveals = $$('.reveal');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('reveal-ready');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  $$('a[target="_blank"]').forEach(a => {
+    if (!a.rel.includes('noopener')) {
+      a.rel = (a.rel + ' noopener noreferrer').trim();
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
